@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+
+    <!--==================== TYPED - typing animation ====================-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js" integrity="sha512-MzkTUQKzHBkhWDcz2CVCP1GBbj8NPlpVW4oZrvc4//GFLiXmBno2yb6C9Cb0POuO4jpQrmxMLYKCuMJN7XDcBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <!--==================== JS ====================-->
+    <script defer src="/static/js/script.js"></script>
+    <!-- defer автрибут  script который говорит браузеру чтобы запускал скрипты только после загрузки html-->
+    
+    <title>MyDigitalNook</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <div class="header__container container">
+                <a href="/" class="header__logo logo"> 
+                    <span class="logo__symbol"><</span>
+                    <span class="logo__text">Sanzhar</span>
+                    <span class="logo__symbol">/</span>
+                    <span class="logo__text">Sovet</span>
+                    <span class="logo__symbol">></span>
+                </a>
+
+                <nav class="header__menu menu" id="nav-menu">
+
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <img class="header__icon header__icon--skills" src="/static/img/minecraft/Diamond.webp" alt="">
+                            <a class="menu__text menu__text--skills" href="#">Skills</a>
+                        </li>
+                        <li class="menu__item">
+                            <img class="header__icon header__icon--education" src="/static/img/minecraft/Bottle_of_Enchanting.webp" alt="">
+                            <a class="menu__text menu__text--education" href="#">Education</a>
+                        </li>
+                        <li class="menu__item">
+                            <img class="header__icon header__icon--projects" src="/static/img/minecraft/Redstone_Dust.webp" alt="">
+                            <a class="menu__text menu__text--projects" href="#">Projects</a>
+                        </li>
+                        <li class="menu__item">
+                            <img class="header__icon header__icon--contact-me" src="/static/img/minecraft/Feather.webp" alt="">
+                            <a class="menu__text menu__text--contact-me" href="#">Contact me</a>
+                        </li>
+                    </ul>
+
+                    <div class="menu__close" id="nav-close">
+                        <svg class="header__icon header__icon--close" viewBox="0 0 24 24">
+                            <polygon points="15 13 16 13 16 14 17 14 17 15 18 15 18 16 19 16 19 17 20 17 20 18 21 18 21 19 22 19 22 20 21 20 21 21 20 21 20 22 19 22 19 21 18 21 18 20 17 20 17 19 16 19 16 18 15 18 15 17 14 17 14 16 13 16 13 15 11 15 11 16 10 16 10 17 9 17 9 18 8 18 8 19 7 19 7 20 6 20 6 21 5 21 5 22 4 22 4 21 3 21 3 20 2 20 2 19 3 19 3 18 4 18 4 17 5 17 5 16 6 16 6 15 7 15 7 14 8 14 8 13 9 13 9 11 8 11 8 10 7 10 7 9 6 9 6 8 5 8 5 7 4 7 4 6 3 6 3 5 2 5 2 4 3 4 3 3 4 3 4 2 5 2 5 3 6 3 6 4 7 4 7 5 8 5 8 6 9 6 9 7 10 7 10 8 11 8 11 9 13 9 13 8 14 8 14 7 15 7 15 6 16 6 16 5 17 5 17 4 18 4 18 3 19 3 19 2 20 2 20 3 21 3 21 4 22 4 22 5 21 5 21 6 20 6 20 7 19 7 19 8 18 8 18 9 17 9 17 10 16 10 16 11 15 11 15 13"/>
+                        </svg>
+                    </div>
+                </nav>
+
+
+                <div class="header__actions">
+
+                    <div class="header__button">
+                        <img class="header__icon header__icon--moon" src="/static/img/icons/moon.svg" alt="theme">
+                    </div>
+
+                    <div class="header__button header__button--burger" id="nav-burger">
+                        <svg class="header__icon header__icon--burger" viewBox="0 0 24 24">
+                            <path d="m10,13H2v1h-1v8h1v1h8v-1h1v-8h-1v-1Zm-1,8H3v-6h6v6Z"/>
+                            <path d="m10,2v-1H2v1h-1v8h1v1h8v-1h1V2h-1Zm-7,7V3h6v6H3Z"/>
+                            <path d="m22,13h-8v1h-1v8h1v1h8v-1h1v-8h-1v-1Zm-1,8h-6v-6h6v6Z"/>
+                            <path d="m22,2v-1h-8v1h-1v8h1v1h8v-1h1V2h-1Zm-1,7h-6V3h6v6Z"/>
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            
+            <!--==================== SNEAKE BACKGROUND ====================-->
+            <div class="snake">
+                <div class="snake__gradient snake__gradient--greeting"></div>
+                <div class="snake__gradient snake__gradient--skills"></div>
+                <div class="snake__gradient snake__gradient--contact"></div>
+                <div class="snake__grid" id="snake-grid"></div>
+            </div>
+
+
+            <!--==================== GREETING ====================-->
+            <section class="greeting section" id="greeting">
+                <div class="greeting__container container">
+
+                    <div class="greeting__profiles">
+                        <a href="https://www.linkedin.com/in/sanzhar-sovet-a04620236/" target="_blank">
+                            <img class="greeting__icons" src="/static/img/icons/linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="https://github.com/sovetskiysn" target="_blank">
+                            <img class="greeting__icons" src="/static/img/icons/github.svg" alt="gihub">
+                        </a>
+                        <a href="https://www.kaggle.com/sovetskiysn" target="_blank">
+                            <img class="greeting__icons" src="/static/img/icons/kaggle.svg" alt="kaggle">
+                        </a>
+                    </div>
+                    
+                    <div class="greeting__avatar">
+                        <img src="/static/img/my_pixel_photo.jpg" alt="my photo">
+                    </div>
+
+                    <div class="greeting__info">
+                        <h3 class="greeting__subtitle">Hello, my name is</h3>
+                        <h1 class="greeting__title">Sanzhar Sovet</h1>
+                        <h3 class="greeting__subtitle" id="typing">and I am a <span class="typing"></span></h3>
+
+                        <a class="greeting__button" href="/resume.pdf" download>Download Resume</a>
+                    </div>
+
+                    
+
+                </div>
+
+            </section>
+
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section">
+
+
+                <div class="skills__title container">
+                    <h2 class="title">Skills</h2>
+                </div>
+
+
+
+                <div class="skills__container container">
+                    
+                    <div class="skills__category">
+                        <div class="title skills__category--title">Data science / AI</div>
+
+                        <div class="skills__tags-list">
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/NumPy.png" alt="">
+                                <span>NumPy</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/Pandas.png" alt="">
+                                <span>Pandas</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/scikit-learn.png" alt="">
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/PyTorch.png" alt="">
+                                <span>PyTorch</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/TensorFlow.png" alt="">
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/dl.png" alt="">
+                                <span>Deep learning</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/nlp.png" alt="">
+                                <span>Natural Language Processing</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/ts.png" alt="">
+                                <span>Time series analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <div class="skills__category--title title">Web development</div>
+
+                        <div class="skills__tags-list">
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/html.png" alt="">
+                                <span>HTML</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/css.png" alt="">
+                                <span>CSS</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/javascript.png" alt="">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/FastAPI.png" alt="">
+                                <span>FaskAPI</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/docker.png" alt="">
+                                <span>Docker</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/Flask.png" alt="">
+                                <span>Flask</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <div class="skills__category--title title">Data Analytics</div>
+
+                        <div class="skills__tags-list">
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/python.png" alt="">
+                                <span>Python</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/sql.png" alt="">
+                                <span>SQL</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/power-bi.png" alt="">
+                                <span>Power BI</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/dax-studio.png" alt="">
+                                <span>Dax Studio</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/excel.png" alt="">
+                                <span>Excel</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/vba.png" alt="">
+                                <span>Visual Basic</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/Selenium.png" alt="">
+                                <span>Selenium</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/statistics.png" alt="">
+                                <span>Statistics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <div class="skills__category--title title">Tools</div>
+
+                        <div class="skills__tags-list">
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/git.png" alt="">
+                                <span>Git</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/vscode.png" alt="">
+                                <span>VSCode</span>
+                            </div>
+                            <div class="skills__tag">
+                                <img class="skills__icon" src="/static/img/tags/figma.png" alt="">
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+
+            </section>
+
+
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section">
+
+                <div class="projects__title container">
+                    <h2 class="title">Projects</h2>
+                </div>
+                <div class="projects__container container">
+
+                    <div class="projects__item">
+                        <img class="projects__image" src="/static/img/projects/Digital-aquarium.jpg" alt="none">
+
+                        <div class="projects__content">
+                            <h3 class="projects__name">Digital-aquarium: 🌏 <br>Evolutionary Reinforcement Learning</h3>
+                            <p class="projects__description">Built a decentralized multi-agent simulation where agents, controlled by neural networks, evolved over 100 generations using genetic algorithms. Investigated the impact of environmental pressures on adaptive behaviors in competitive foraging tasks, revealing increased aggression in high-density scenarios. Published findings in an IEEE conference, contributing to research on emergent intelligence and adaptive AI strategies in dynamic environments.</p>
+
+                            <div class="projects__buttons-list">
+                                <a class="projects__button projects__button--github" href="https://github.com/sovetskiysn/Digital-aquarium">
+                                    <svg class="projects__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a class="projects__button projects__button--demo" href="https://www.youtube.com/watch?v=gZJovCmdMy4">
+                                    <svg class="projects__icon" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="m20.4703 3.4875c-2.2641-2.25-5.2781-3.4875-8.4797-3.4875-3.20154 0-6.21091 1.2375-8.47498 3.4875-2.26875 2.25-3.51562 5.24063-3.51562 8.4234 0 3.1829 1.24687 6.1735 3.51562 8.4235 2.26407 2.2453 5.27344 3.4875 8.47498 3.4875 3.2016 0 6.211-1.2375 8.475-3.4875 2.2688-2.25 3.5156-5.2406 3.5156-8.4235 0-3.18277-1.2468-6.1734-3.5109-8.4234zm.8766 4.59844h-4.4485c-.0047-.01406-.0047-.02813-.0093-.04219-.4313-2.32969-1.0641-4.28906-1.5563-5.60625 2.7234.94688 4.9172 3.01875 6.0141 5.64844zm-10.711-6.11719c.4454-.06094.8953-.08906 1.3547-.08906.3797 0 .75.02344 1.1156.06094.4032.93281 1.3079 3.22968 1.8797 6.14531h-5.80309c.4875-3.24375 1.29849-5.66719 1.45309-6.11719zm-8.7609 9.94215c0-.6656.06562-1.3171.19219-1.94996h5.00156c-.17344 1.87966-.1875 3.68906-.04219 5.39066h-4.5375c-.39844-1.0735-.61406-2.2313-.61406-3.4407zm1.54219 5.3157h3.84375c.23437 1.4297.58594 2.7797 1.06406 4.0312-2.03906-.7875-3.75937-2.2172-4.90781-4.0312zm3.87187-9.14066h-4.65c1.07813-2.58281 3.21094-4.62188 5.85938-5.59219-.35156 1.2-.86719 3.18281-1.20938 5.59219zm6.05154 13.76716c-.4406.0563-.8906.0891-1.3453.0891-.4687 0-.9281-.0328-1.3828-.0938-.7125-1.4812-1.17187-3.0515-1.44375-4.6218h5.91095c-.3328 1.5609-.886 3.1312-1.7391 4.6265zm2.0297-6.5015h-6.45468c-.17343-1.9172-.11718-3.7688.0375-5.39066h6.33748c.2063 1.62656.286 3.47816.0797 5.39066zm.3844 5.8734c.5531-1.2516.9703-2.5875 1.2375-3.9984h3.5765c-1.1296 1.7906-2.8171 3.2015-4.814 3.9984zm1.5094-5.8734.014-.1688c.15-1.6594.1172-3.4125-.0984-5.22186h4.739c.1266.63286.1922 1.28436.1922 1.94996 0 1.2094-.2156 2.3672-.614 3.4407z"></path>
+                                    </svg>
+                                    Demo
+                                </a>
+                                <!-- <a class="projects__button projects__button--paper" href="https://journal-link.com/article">
+                                    <svg class="projects__icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                     Paper
+                                </a> -->
+
+                                <!-- <button class="projects__button projects__button--read-more" id="read-more">
+                                    Read More
+                                    <svg class="projects__icon" viewBox="0 0 24 24">
+                                    <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                    <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"/>
+                                    </svg>
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="projects__item">
+                        <img class="projects__image" src="/static/img/projects/Excel-automaton.jpg" alt="none">
+
+                        <div class="projects__content">
+                            <h3 class="projects__name">Excel-automaton: ⚙️ <br> Automation Tool for Excel</h3>
+                            <p class="projects__description">Designed and developed a Windows desktop application to automate the processing of large volumes of Excel reports in office workflows. The tool features a graphical interface built with Tkinter and applies custom transformation logic using pandas, openpyxl, and win32com. It enables non-technical users to batch-process files, extract key data, and generate standardized outputs. The solution helped reduce manual work and streamline routine operations across multiple departments.</p>
+
+                            <div class="projects__buttons-list">
+                                <a class="projects__button projects__button--github" href="https://github.com/sovetskiysn/Excel-automaton">
+                                    <svg class="projects__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a class="projects__button projects__button--demo" href="https://youtu.be/qi0W0-gQHa8">
+                                    <svg class="projects__icon" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="m20.4703 3.4875c-2.2641-2.25-5.2781-3.4875-8.4797-3.4875-3.20154 0-6.21091 1.2375-8.47498 3.4875-2.26875 2.25-3.51562 5.24063-3.51562 8.4234 0 3.1829 1.24687 6.1735 3.51562 8.4235 2.26407 2.2453 5.27344 3.4875 8.47498 3.4875 3.2016 0 6.211-1.2375 8.475-3.4875 2.2688-2.25 3.5156-5.2406 3.5156-8.4235 0-3.18277-1.2468-6.1734-3.5109-8.4234zm.8766 4.59844h-4.4485c-.0047-.01406-.0047-.02813-.0093-.04219-.4313-2.32969-1.0641-4.28906-1.5563-5.60625 2.7234.94688 4.9172 3.01875 6.0141 5.64844zm-10.711-6.11719c.4454-.06094.8953-.08906 1.3547-.08906.3797 0 .75.02344 1.1156.06094.4032.93281 1.3079 3.22968 1.8797 6.14531h-5.80309c.4875-3.24375 1.29849-5.66719 1.45309-6.11719zm-8.7609 9.94215c0-.6656.06562-1.3171.19219-1.94996h5.00156c-.17344 1.87966-.1875 3.68906-.04219 5.39066h-4.5375c-.39844-1.0735-.61406-2.2313-.61406-3.4407zm1.54219 5.3157h3.84375c.23437 1.4297.58594 2.7797 1.06406 4.0312-2.03906-.7875-3.75937-2.2172-4.90781-4.0312zm3.87187-9.14066h-4.65c1.07813-2.58281 3.21094-4.62188 5.85938-5.59219-.35156 1.2-.86719 3.18281-1.20938 5.59219zm6.05154 13.76716c-.4406.0563-.8906.0891-1.3453.0891-.4687 0-.9281-.0328-1.3828-.0938-.7125-1.4812-1.17187-3.0515-1.44375-4.6218h5.91095c-.3328 1.5609-.886 3.1312-1.7391 4.6265zm2.0297-6.5015h-6.45468c-.17343-1.9172-.11718-3.7688.0375-5.39066h6.33748c.2063 1.62656.286 3.47816.0797 5.39066zm.3844 5.8734c.5531-1.2516.9703-2.5875 1.2375-3.9984h3.5765c-1.1296 1.7906-2.8171 3.2015-4.814 3.9984zm1.5094-5.8734.014-.1688c.15-1.6594.1172-3.4125-.0984-5.22186h4.739c.1266.63286.1922 1.28436.1922 1.94996 0 1.2094-.2156 2.3672-.614 3.4407z"></path>
+                                    </svg>
+                                    Demo
+                                </a>
+                                <!-- <a class="projects__button projects__button--paper" href="https://journal-link.com/article">
+                                    <svg class="projects__icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                     Paper
+                                </a> -->
+
+                                <!-- <button class="projects__button projects__button--read-more" id="read-more">
+                                    Read More
+                                    <svg class="projects__icon" viewBox="0 0 24 24">
+                                    <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                    <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"/>
+                                    </svg>
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+
+
+            <!--====================  ====================-->
+            <section class="contact section">
+                <div class="contact__title container">
+                    <h2 class="title">Contact me</h2>
+                </div>
+                <div class="contact__container container">
+
+                    <div class="contact__information">
+
+                        <div class="contact__row">
+                            <!-- <i class="uil uil-phone contact__icon"></i> -->
+                            <svg class="contact__icon" viewBox="0 0 35 42" fill="currentColor">
+                            <path d="M17.2312 20.2314C19.9192 20.2685 22.5039 19.1957 24.3772 17.2653C26.2964 15.3871 27.3599 12.8015 27.3184 10.1149C27.3606 7.42696 26.297 4.83986 24.3772 2.96036C22.5029 1.03197 19.9185 -0.0391955 17.2312 -0.00147797C14.5453 -0.0385202 11.9625 1.03262 10.0895 2.96036C8.16138 4.83594 7.08985 7.42369 7.12691 10.1149C7.09103 12.8047 8.16247 15.3907 10.0895 17.2653C11.9621 19.1941 14.5447 20.2668 17.2312 20.2314Z"/>
+                            <path d="M34.9125 32.2966C34.8461 31.4065 34.7321 30.5205 34.5709 29.6425C34.4118 28.7402 34.1937 27.8493 33.9178 26.9756C33.6388 26.1108 33.2711 25.2772 32.8207 24.4881C32.3757 23.6999 31.8193 22.9801 31.1687 22.3512C30.4815 21.7048 29.6754 21.1982 28.7952 20.8596C27.8285 20.4872 26.8001 20.3016 25.7644 20.3125C25.3375 20.3125 24.9106 20.4877 24.1209 21.0092L22.4134 22.1118C21.7187 22.5236 20.9761 22.848 20.2021 23.0777C18.4449 23.6612 16.5465 23.6612 14.7893 23.0777C14.0148 22.8457 13.272 22.5184 12.578 22.1033L10.8705 20.9963C10.0722 20.4749 9.65814 20.2997 9.22699 20.2997C8.19096 20.2899 7.1625 20.477 6.19613 20.851C5.32279 21.1872 4.52264 21.6894 3.83974 22.3298C3.18916 22.9588 2.63274 23.6785 2.18771 24.4668C1.7375 25.2559 1.36986 26.0895 1.09062 26.9542C0.809633 27.8346 0.587168 28.7327 0.424684 29.6425C0.263413 30.5205 0.149414 31.4064 0.0831791 32.2966C0.0276845 33.1001 -0.00219727 33.9336 -0.00219727 34.7755C-0.00219727 36.9681 0.69362 38.7417 2.06818 40.0538C3.44274 41.3659 5.21857 42.0028 7.39993 42.0028H27.5957C29.7771 42.0028 31.57 41.3489 32.9275 40.0538C34.2849 38.7588 35.0021 36.9681 35.0021 34.7755C35.0021 33.9293 34.968 33.0959 34.9125 32.2966Z"/>
+
+                            </svg>
+
+
+                            <div>
+                                <dt class="contact__dt">Name</dt>
+                                <dd class="contact__dd">Sanzhar Sovet</dd>
+                            </div>
+                        </div>
+                        <div class="contact__row">
+                            <svg class="contact__icon"  viewBox="0 0 40 38" fill="currentColor">
+                            <path d="M39.3351 16.8997L21.3876 0.553702C20.6061 -0.163734 19.4052 -0.163734 18.6238 0.553702L0.676306 16.8997C0.0506294 17.4696 -0.160383 18.3652 0.145104 19.1543C0.450591 19.9433 1.20978 20.4637 2.05628 20.4642H4.9209V36.8218C4.9209 37.4638 5.44155 37.9842 6.08381 37.9842H15.9375C16.5797 37.9842 17.1004 37.4638 17.1004 36.8218V26.8957H22.8955V36.8218C22.8955 37.4638 23.4162 37.9842 24.0584 37.9842H33.9121C34.5543 37.9842 35.075 37.4638 35.075 36.8218V20.4642H37.9435C38.79 20.4637 39.5492 19.9433 39.8547 19.1543C40.1601 18.3652 39.9491 17.4696 39.3235 16.8997H39.3351Z"/>
+                            <path d="M34.7804 2.36285H26.8804L35.9549 10.6114V3.53679C35.958 3.22449 35.8353 2.92407 35.6143 2.70323C35.3934 2.48239 35.0928 2.35971 34.7804 2.36285Z"/>
+                            </svg>
+
+                            <div>
+                                <dt class="contact__dt">Address</dt>
+                                <dd class="contact__dd">Kazakhstan, Astana</dd>
+                            </div>
+                        </div>
+                        <div class="contact__row">
+                            <svg class="contact__icon" viewBox="0 0 38 38" fill="currentColor">
+                            <path d="M27.1811 25.5788C26.4388 24.8367 25.4322 24.4198 24.3826 24.4198C23.333 24.4198 22.3263 24.8367 21.584 25.5788L20.9744 26.1868C17.6567 23.4057 14.5896 20.3386 11.8085 17.0209L12.4181 16.4113C12.7858 16.0437 13.0774 15.6073 13.2764 15.127C13.4754 14.6467 13.5778 14.1318 13.5778 13.6119C13.5778 13.092 13.4754 12.5772 13.2764 12.0969C13.0774 11.6166 12.7858 11.1802 12.4181 10.8126L9.05828 7.45436C8.31598 6.71228 7.30934 6.29541 6.25973 6.29541C5.21012 6.29541 4.20349 6.71228 3.46119 7.45436L1.61819 9.29736C0.720226 10.2022 0.160626 11.3882 0.0332098 12.6566C-0.0942064 13.925 0.218307 15.1987 0.918357 16.264C6.39746 24.5196 13.4722 31.596 21.7265 37.0769C22.7949 37.7679 24.0665 38.075 25.3325 37.9478C26.5985 37.8206 27.7836 37.2667 28.6932 36.3771L30.5378 34.5341C31.2798 33.7918 31.6967 32.7852 31.6967 31.7356C31.6967 30.686 31.2798 29.6793 30.5378 28.937L27.1811 25.5788Z"/>
+                            <path d="M18.2083 0C17.7884 0 17.3857 0.166815 17.0887 0.463748C16.7918 0.76068 16.625 1.16341 16.625 1.58333C16.625 2.00326 16.7918 2.40599 17.0887 2.70292C17.3857 2.99985 17.7884 3.16667 18.2083 3.16667C22.616 3.1717 26.8417 4.92487 29.9584 8.04157C33.0751 11.1583 34.8283 15.384 34.8333 19.7917C34.8333 20.2116 35.0001 20.6143 35.2971 20.9113C35.594 21.2082 35.9967 21.375 36.4167 21.375C36.8366 21.375 37.2393 21.2082 37.5363 20.9113C37.8332 20.6143 38 20.2116 38 19.7917C37.9937 14.5445 35.9065 9.51408 32.1962 5.80379C28.4859 2.09349 23.4555 0.00628527 18.2083 0Z"/>
+                            <path d="M18.2083 9.50016C20.9368 9.50351 23.5526 10.5889 25.4819 12.5182C27.4113 14.4476 28.4966 17.0633 28.5 19.7918C28.5 20.2118 28.6668 20.6145 28.9637 20.9114C29.2607 21.2083 29.6634 21.3752 30.0833 21.3752C30.5033 21.3752 30.906 21.2083 31.2029 20.9114C31.4999 20.6145 31.6667 20.2118 31.6667 19.7918C31.6625 16.2237 30.2432 12.803 27.7202 10.28C25.1972 7.75696 21.7764 6.33769 18.2083 6.3335C17.7884 6.3335 17.3857 6.50031 17.0887 6.79724C16.7918 7.09418 16.625 7.4969 16.625 7.91683C16.625 8.33676 16.7918 8.73948 17.0887 9.03641C17.3857 9.33335 17.7884 9.50016 18.2083 9.50016Z"/>
+                            <path d="M18.2083 15.8332C19.2581 15.8332 20.265 16.2502 21.0073 16.9925C21.7496 17.7349 22.1667 18.7417 22.1667 19.7915C22.1667 20.2114 22.3335 20.6142 22.6304 20.9111C22.9273 21.208 23.3301 21.3748 23.75 21.3748C24.1699 21.3748 24.5727 21.208 24.8696 20.9111C25.1665 20.6142 25.3333 20.2114 25.3333 19.7915C25.3312 17.9025 24.5799 16.0914 23.2442 14.7557C21.9084 13.4199 20.0974 12.6686 18.2083 12.6665C17.7884 12.6665 17.3857 12.8333 17.0887 13.1303C16.7918 13.4272 16.625 13.8299 16.625 14.2498C16.625 14.6698 16.7918 15.0725 17.0887 15.3694C17.3857 15.6664 17.7884 15.8332 18.2083 15.8332Z"/>
+                            </svg>
+
+                            <div>
+                                <dt class="contact__dt">Phone</dt>
+                                <dd class="contact__dd">+7 (705) 129 40 08</dd>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact__form">
+
+                        <input class="contact__field contact__field--name" placeholder="Name" type="text" id="name">
+                        <input class="contact__field contact__field--email" placeholder="Email" type="text" id="name">
+                        <input class="contact__field contact__field--subject" placeholder="Subject" type="text" id="name">
+                        <textarea class="contact__field contact__field--message" placeholder="Message" id="message-id" rows="5"></textarea>
+
+
+                        <button class="contact__button">
+                            Send message
+                            <svg class="contact__icon contact__icon--button" viewBox="0 0 25 25" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5492 3.37256C22.8448 3.62351 22.9766 4.01788 22.8912 4.39612L19.2453 20.5419C19.1657 20.8941 18.9096 21.1799 18.5682 21.2974C18.2269 21.4149 17.849 21.3473 17.5696 21.1187L12.8052 17.2207L10.8065 20.8184C10.6019 21.1867 10.1955 21.3955 9.77696 21.3473C9.3584 21.2993 9.01002 21.0038 8.89427 20.5987L6.98543 13.9177L2.39991 13.0007C1.94876 12.9103 1.61025 12.5349 1.56712 12.0768C1.52399 11.6188 1.78647 11.1867 2.21283 11.0138L21.4837 3.20133C21.843 3.05564 22.2535 3.12162 22.5492 3.37256ZM6.21551 11.6392L8.01681 11.9994C8.39928 12.0759 8.70697 12.3596 8.81412 12.7347L10.2066 17.6083L11.5895 15.1191C11.7394 14.8493 12.0011 14.6599 12.3044 14.6019C12.6075 14.5439 12.9207 14.6234 13.1597 14.8188L17.5844 18.439L20.4201 5.88051L6.21551 11.6392Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.43 5.04835C22.8868 4.76081 23.0482 4.17209 22.8021 3.69182C22.5559 3.21153 21.9837 2.99874 21.4836 3.2015L2.21283 11.014C1.78647 11.1869 1.52399 11.6189 1.56712 12.077C1.61025 12.5351 1.94876 12.9106 2.39991 13.0008L7.60824 14.0425C7.86993 14.0948 8.14171 14.0447 8.36754 13.9025L22.43 5.04835Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8913 4.39617C22.9977 3.92493 22.7661 3.44236 22.332 3.23054C21.8978 3.01871 21.375 3.13321 21.0691 3.5071L11.694 14.9655C11.3297 15.4107 11.3953 16.0669 11.8406 16.4313L17.5698 21.1188C17.8492 21.3474 18.2271 21.4151 18.5684 21.2976C18.9098 21.1801 19.1659 20.8941 19.2455 20.542L22.8913 4.39617Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+ 
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__text">
+                    <span>Made by Sanzhar Sovet</span>
+                    <span>Copyright 2025</span>
+                </div>
+            </div>
+        </footer>
+
+
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <svg class="scrollup__icon icon" viewBox="0 0 24 24">
+                <path d="M17.71,11.29l-5-5a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21l-5,5a1,1,0,0,0,1.42,1.42L11,9.41V17a1,1,0,0,0,2,0V9.41l3.29,3.3a1,1,0,0,0,1.42,0A1,1,0,0,0,17.71,11.29Z"></path>
+            </svg>
+        </a>
+
+    </div>
+</body>
+</html>

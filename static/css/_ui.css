@@ -1,0 +1,133 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --background-color:  #1F1F1F;
+    --neon-green: #15FF08;
+    --sexy-red: #DC143C;
+
+    --panel-background-color: #292929;
+
+    --panel-tag-color:  #363636;
+    --panel-tag-border-color:  #747373;
+
+
+    --font-color: #fff;
+    --gray-text-color: #7F9089;    
+
+
+
+
+    --pixel-font: 'DD FONT', 'Neue Montreal', sans-serif;
+    --regular-font: 'Neue Montreal', sans-serif;
+
+    
+
+
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+/*==================== BASE ====================*/  
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+
+  font-size: 16px;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  font-family: var(--regular-font);
+  
+
+  /* скрыть полосу прокрутки */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE/Edge */
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+/*==================== LAYOUT ====================*/
+
+/* wrapper используется для чтобы исключить горизонтальный скролл
+   и чтобы можно было удобно сразу прижать футер к низу экрана */
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+
+.logo {
+    font-size: 1rem;
+}
+.logo__symbol {
+    font-weight: 300;
+    color: #E11919;
+}
+.logo__text {
+    font-weight: 300;
+    color: #fff;
+}
+
+.section{
+    padding: 2rem 0 2rem;
+}
+
+.title{
+    font-family: var(--pixel-font);
+    font-size: 2rem;
+    line-height: 4rem;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/*========== SCROLL UP ==========*/
+
+.scrollup{
+    position: fixed;
+    right: 1.5rem;
+    bottom: 6rem;
+    background-color: var(--neon-green);
+    border: 0;
+    opacity: .8;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+
+    border-radius: 0.2rem;
+    padding: 0.1rem;
+}
+
+.scrollup:hover{
+    background-color: var(--neon-green);
+}
+
+.scrollup__icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--background-color);
+}
+/* Show scroll */
+.show-scroll{
+    bottom: 5rem;
+}
