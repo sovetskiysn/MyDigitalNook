@@ -1,22 +1,22 @@
 /*Шрифт*/
-@import url("./static/css/_fonts.css");
+@import url("/static/css/_fonts.css");
 
 /*Иконычный шрифт*/
-@import url("./static/css/_icons.css");
+@import url("/static/css/_icons.css");
 
 /*Обнуление*/
-@import url("./static/css/_nulling.css");
+@import url("/static/css/_nulling.css");
 
 
 /*для которые мы можем переиспользовать во всех частях сайта*/
-@import url("./static/css/_ui.css");
+@import url("/static/css/_ui.css");
 
-@import url("./static/css/_header.css");
+@import url("/static/css/_header.css");
 
-@import url("./static/css/_main.css");
+@import url("/static/css/_main.css");
 
-@import url("./static/css/_footer.css");
+@import url("/static/css/_footer.css");
 
-@import url("./static/css/_media-queries.css");
+@import url("/static/css/_media-queries.css");
 
 
